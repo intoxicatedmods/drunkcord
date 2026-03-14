@@ -1,5 +1,5 @@
 /*
- * Vencord, a modification for Discord's desktop app
+ * drunkcord, a modification for Discord's desktop app
  * Copyright (c) 2023 Vendicated and contributors
  *
  * This program is free software: you can redistribute it and/or modify
@@ -31,7 +31,7 @@ for (const file of ["preload.d.ts", "userplugins", "main", "debug", "src", "brow
 function copyDtsFiles(from: string, to: string) {
     for (const file of readdirSync(from, { withFileTypes: true })) {
         // bad
-        if (from === VencordSrc && file.name === "globals.d.ts") continue;
+        if (from === drunkcordSrc && file.name === "globals.d.ts") continue;
 
         const fullFrom = join(from, file.name);
         const fullTo = join(to, file.name);
